@@ -1,0 +1,5 @@
+# Личные настройки Claude Code (разрешения на команды): в репозиторий не попадают
+.claude/settings.local.json
+
+# macOS
+.DS_Store
