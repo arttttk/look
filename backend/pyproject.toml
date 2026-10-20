@@ -1,0 +1,38 @@
+[project]
+name = "look-backend"
+version = "0.1.0"
+description = "Backend для приложения Look: каталог, автоподбор образов, гардероб, лента."
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "sqlalchemy>=2.0",
+    "pydantic-settings>=2.4",
+    "python-multipart>=0.0.9",
+    "httpx>=0.28.1",
+    "phonenumbers>=9.0.41",
+    "email-validator>=2.3.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8",
+    "pytest-cov>=7.1.0",
+    "ruff>=0.6",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.coverage.run]
+omit = ["app/main.py"]  # точка входа uvicorn: две строки сборки, проверяется запуском сервера
