@@ -24,7 +24,24 @@
     },
     "plugins": [
       "expo-router",
-      "expo-status-bar"
+      "expo-status-bar",
+      "expo-image",
+      "expo-web-browser",
+      "expo-secure-store",
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Look использует геопозицию, чтобы узнать погоду в вашем городе и подобрать подходящие образы."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Look использует ваши фото, чтобы добавлять вещи в гардероб.",
+          "cameraPermission": "Look использует камеру, чтобы фотографировать вещи для гардероба.",
+          "microphonePermission": false
+        }
+      ]
     ],
     "experiments": {
       "typedRoutes": true

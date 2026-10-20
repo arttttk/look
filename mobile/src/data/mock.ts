@@ -1,35 +1,19 @@
-export type Look = {
+// Промо-баннеры главной. Поле `image` — заглушка (picsum), позже заменяется на обложки с бэкенда;
+// `color` — фон на время загрузки картинки и на случай, если она не загрузилась.
+// Образы, ленту и каталог собирает lib/outfits — здесь их нет.
+import { photo } from './photo';
+
+export type Banner = {
   id: string;
+  badge: string;
   title: string;
-  tag: string;
+  image: string;
   color: string;
-  pieces: string[];
 };
 
-export type QuickAction = {
-  id: string;
-  title: string;
-  subtitle: string;
-  icon: string;
-};
-
-export const lookOfTheDay: Look = {
-  id: 'today',
-  title: 'Городской минимализм',
-  tag: 'Образ дня · 18°C, облачно',
-  color: '#2B2A28',
-  pieces: ['🧥', '👕', '👖', '👟'],
-};
-
-export const quickActions: QuickAction[] = [
-  { id: 'scan', title: 'Добавить вещь', subtitle: 'Сфотографировать', icon: '📸' },
-  { id: 'wardrobe', title: 'Мой гардероб', subtitle: '0 вещей', icon: '👚' },
-  { id: 'tryon', title: 'Примерить', subtitle: 'Скоро', icon: '✨' },
-];
-
-export const recommendations: Look[] = [
-  { id: 'r1', title: 'Офис без галстука', tag: 'Работа', color: '#D9C7B0', pieces: ['🧥', '👔', '👖'] },
-  { id: 'r2', title: 'Выходные в парке', tag: 'Casual', color: '#BFD3C1', pieces: ['🧢', '👕', '👟'] },
-  { id: 'r3', title: 'Вечер в городе', tag: 'Свидание', color: '#E4B7AC', pieces: ['👗', '👜', '👠'] },
-  { id: 'r4', title: 'Спорт и прогулка', tag: 'Актив', color: '#B7C6DD', pieces: ['🧥', '🩳', '👟'] },
+export const banners: Banner[] = [
+  { id: 'b1', badge: 'Сезон осень 2026', title: 'Лучшие рекомендации', image: photo('look-b1', 640, 320), color: '#2A2724' },
+  { id: 'b2', badge: 'Винтаж 2026', title: 'Осень', image: photo('look-b2', 640, 320), color: '#3A302A' },
+  { id: 'b3', badge: 'Тренд недели', title: 'Оверсайз и слои', image: photo('look-b3', 640, 320), color: '#262A2D' },
+  { id: 'b4', badge: 'Новинки', title: 'Тёплые оттенки', image: photo('look-b4', 640, 320), color: '#3B2C25' },
 ];

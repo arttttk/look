@@ -1,12 +1,17 @@
 export const colors = {
-  bg: '#FAF7F2',
-  surface: '#FFFFFF',
-  ink: '#1C1B1A',
-  inkSoft: '#6B6761',
-  line: '#ECE6DC',
-  accent: '#C8553D',
-  accentSoft: '#F6E3DD',
+  bg: '#F3F1EC',
+  surface: '#F9F8F5',
+  ink: '#111111',
+  inkSoft: '#8C8983',
+  line: '#E3DFD7',
+  chip: '#E6E3DC',
   onDark: '#FFFFFF',
+  onDarkSoft: 'rgba(255,255,255,0.72)',
+  like: '#E0463E',
+} as const;
+
+export const layout = {
+  tabBarHeight: 68,
 } as const;
 
 export const spacing = {
@@ -18,6 +23,7 @@ export const spacing = {
 } as const;
 
 export const radius = {
+  sm: 12,
   md: 16,
   lg: 24,
   pill: 999,
